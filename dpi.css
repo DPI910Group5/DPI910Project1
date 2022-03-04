@@ -1,6 +1,8 @@
 body {
     margin: 0;
-     background-image: url("images.jpg");
+     background-image: url("images.jpg"); 
+   
+    
   }
   
   /* This will help me customize the header */
@@ -35,8 +37,8 @@ body {
 .container {
     padding: 16px;
   }
-  /* Clear floats */
-.clearfix::after {
+  /* trying to clear the floats */
+.tlf::after {
     content: "";
     clear: both;
     display: table;
