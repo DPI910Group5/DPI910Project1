@@ -13,7 +13,7 @@
         <h1>Welcome to DPI910 Sign In</h1>
       </div>
       <div class="nav_bar">
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
