@@ -31,7 +31,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
                                    
-          <div class="clearfix">
+          <div class="tlf">
             <button type="submit" name="login" class="signupbtn">Sign In</button>
           </div>
         </div>
