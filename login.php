@@ -34,6 +34,9 @@
           <div class="clearfix">
             <button type="submit" name="login" class="signupbtn">Sign In</button>
           </div>
+          <p>
+  		    Not yet a member? <a href="regist.php">Sign up</a>
+  	      </p>
         </div>
       </form>
 </body>
