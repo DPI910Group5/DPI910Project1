@@ -41,7 +41,7 @@
       <input type="password" placeholder="Repeat Password" name="pswRepeat" value="<?php echo $pswRepeat;?>" required>
       
                    
-      <div class="clearfix">
+      <div class="tlf">
         <button type="button" class="cancelbtn">Cancel</button>
         <button type="submit" name="submit" class="signupbtn">Sign Up</button>
       </div>
