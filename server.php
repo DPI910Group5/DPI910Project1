@@ -57,3 +57,33 @@ if (isset($_POST['submit'])) {
   	header('location: index.php');
   }
 }
+
+
+// LOGIN USER
+if (isset($_POST['login'])) {
+    $fname = mysqli_real_escape_string($db, $_POST['fname']);
+    $lname = mysqli_real_escape_string($db, $_POST['lname']);
+    $password = mysqli_real_escape_string($db, $_POST['psw']);
+  
+    if (empty($fname)) {
+        array_push($errors, "Name is required");
+    }
+    if (empty($password)) {
+        array_push($errors, "Password is required");
+    }
+  
+    if (count($errors) == 0) {
+        $password = md5($password);
+        $query = "SELECT * FROM users WHERE fname='$fname' AND password='$password'";
+        $results = mysqli_query($db, $query);
+        if (mysqli_num_rows($results) == 1) {
+          $_SESSION['fname'] = $fname;
+          $_SESSION['success'] = "You are now logged in";
+          header('location: index.php');
+        }else {
+            array_push($errors, "Wrong username/password combination");
+        }
+    }
+  }
+  
+  ?>

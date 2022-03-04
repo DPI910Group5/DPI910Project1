@@ -1,3 +1,4 @@
+<?php include ('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <form action="" method="POST" style="border:1px solid #ccc">
+      <form action="login.php" method="POST" style="border:1px solid #ccc">
         <div class="container">
        <b> <p>Sign in to Access your Account.</p> </b> 
           <hr>
@@ -31,47 +32,9 @@
           <input type="password" placeholder="Enter Password" name="psw" required>
                                    
           <div class="clearfix">
-            <button type="submit" class="signupbtn">Sign In</button>
+            <button type="submit" name="login" class="signupbtn">Sign In</button>
           </div>
         </div>
       </form>
-<?php  
-if(isset($_POST["submit"])){  
-  
-if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['psw'])) {  
-    $user=$_POST['fname'];  
-    $pass=$_POST['lname'];
-    $psw=$_POST['psw'];  
-  
-    $con=mysql_connect('localhost','root','') or die(mysql_error());  
-    mysql_select_db('dpi910') or die("cannot select DB");  
-  
-    $query=mysql_query("SELECT * FROM users WHERE fname='".$user."' AND password='".$psw."'");  
-    $numrows=mysql_num_rows($query);  
-    if($numrows!=0)  
-    {  
-    while($row=mysql_fetch_assoc($query))  
-    {  
-    $dbusername=$row['fname'];  
-    $dbpassword=$row['password'];  
-    }  
-  
-    if($user == $dbusername && $pass == $dbpassword)  
-    {  
-    session_start();  
-    $_SESSION['sess_user']=$user;  
-  
-    /* Redirect browser */  
-    header("Location: member.php");  
-    }  
-    } else {  
-    echo "Invalid username or password!";  
-    }  
-  
-} else {  
-    echo "All fields are required!";  
-}  
-}  
-?>
 </body>
 </html>
