@@ -14,6 +14,10 @@ if (isset($_GET['logout'])) {
     header("location: login.php");
 }
 ?>
+<?php
+$fname = $_SESSION['fname'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,5 +40,8 @@ if (isset($_GET['logout'])) {
       </div>
     <a class="btn" href="logout.php">Logout</a>
 </div>
+<ul>
+  <li><a>Welcome <?php echo $fname;?>!</a></li>
+</ul>
 </body>
 </html>
