@@ -38,10 +38,10 @@ $fname = $_SESSION['fname'];
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
-    <a class="btn" href="logout.php">Logout</a>
-</div>
-<ul>
+      <ul>
   <li><a>Welcome <?php echo $fname;?>!</a></li>
 </ul>
+    <a class="btn" href="logout.php">Logout</a>
+</div>
 </body>
 </html>
