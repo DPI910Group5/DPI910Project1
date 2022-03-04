@@ -6,6 +6,7 @@ $fname = "";
 $lname = "";
 $email    = "";
 $errors = array(); 
+$_SESSION['success'] = "";
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'dpi910');
@@ -30,7 +31,7 @@ if (isset($_POST['submit'])) {
   }
 
   // first check the database to make sure 
-  // a user does not already exist with the same username and/or email
+  // a user does not already exist with the same name and/or email
   $user_check_query = "SELECT * FROM users WHERE fname='$fname' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
@@ -61,6 +62,7 @@ if (isset($_POST['submit'])) {
 
 // LOGIN USER
 if (isset($_POST['login'])) {
+    //Parameter sanitization to prevent SQLI
     $fname = mysqli_real_escape_string($db, $_POST['fname']);
     $lname = mysqli_real_escape_string($db, $_POST['lname']);
     $password = mysqli_real_escape_string($db, $_POST['psw']);
@@ -80,9 +82,10 @@ if (isset($_POST['login'])) {
           $_SESSION['fname'] = $fname;
           $_SESSION['success'] = "You are now logged in";
           header('location: index.php');
-        }else {
-            array_push($errors, "Wrong username/password combination");
+        }
+        else {
+            array_push($errors, "Wrong name/password combination");
         }
     }
   }
-  ?>
+?>

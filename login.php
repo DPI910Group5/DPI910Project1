@@ -14,6 +14,7 @@
       </div>
       <div class="nav_bar">
         <a href="index.php">Home</a>
+        <a href="regist.php">Sign Up</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -21,7 +22,7 @@
         <div class="container">
        <b> <p>Sign in to Access your Account.</p> </b> 
           <hr>
-      
+          <?php include('errors.php'); ?>
           <label for="fname"><b>First Name</b></label>
           <input type="text" placeholder="Enter First Name" name="fname" required>
     
