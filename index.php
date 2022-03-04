@@ -34,18 +34,6 @@ if (isset($_GET['logout'])) {
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
-    <div class="content">
-
-  	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-      	<h2>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</h2>
-      </div>
-  	<?php endif ?>
     <a class="btn" href="logout.php">Logout</a>
 </div>
 </body>

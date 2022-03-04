@@ -48,8 +48,8 @@ if (isset($_POST['submit'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$password = md5($password_1);//encrypt the password before saving in the database
-
+  	//$password = md5($password_1);//encrypt the password before saving in the database
+    $password = $password_1
   	$query = "INSERT INTO users (fname, lname, email, password) 
   			  VALUES('$fname', '$lname', '$email', '$password')";
   	mysqli_query($db, $query);
@@ -58,7 +58,6 @@ if (isset($_POST['submit'])) {
   	header('location: index.php');
   }
 }
-
 
 // LOGIN USER
 if (isset($_POST['login'])) {
@@ -75,12 +74,14 @@ if (isset($_POST['login'])) {
     }
   
     if (count($errors) == 0) {
-        $password = md5($password);
+        //$password = md5($password);
         $query = "SELECT * FROM users WHERE fname='$fname' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['fname'] = $fname;
-          $_SESSION['success'] = "You are now logged in";
+          $_SESSION['lname'] = $lname;
+          $_SESSION['psw'] = $psw;
+          $_SESSION['success'] = "You are now logged in $fname";
           header('location: index.php');
         }
         else {
