@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+  }
+  
+  /* This will help me customize the header */
+  .head {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  /* This will allow me to customize the top navigation bar */
+.nav_bar {
+    overflow: hidden;
+    background-color: rgb(151, 44, 44);
+  }
+  
+  /* this will help me to customize the links */
+  .nav_bar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* This will allow me to change colour while hoveing each block */
+  .nav_bar a:hover {
+    background-color: #ddd;
+    color: rgb(52, 160, 145);
+  }
+
+/* This is for adding the padding to container elements */
+.container {
+    padding: 16px;
+  }
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+ /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
