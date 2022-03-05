@@ -1,5 +1,5 @@
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date+' '+ time;
-document.getElementById("date").innerHTML = dateTime;
+var NowDate = new Date();
+var Full_Date = NowDate.getFullYear()+'-'+(NowDate.getMonth()+1)+'-'+NowDate.getDate();
+var Finaltime = NowDate.getHours() + ":" + NowDate.getMinutes() + ":" + NowDate.getSeconds();
+var CurrentTime = Finaltime+' '+ Full_Date;
+document.getElementById("date").innerHTML = CurrentTime;
