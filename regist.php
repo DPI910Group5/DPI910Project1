@@ -11,6 +11,10 @@
 <body>
     <div class="head">
         <h1> Sign Up For DPI Account</h1>
+        <h3> <p id="weeks" class="outset"  style="color:rgb(102, 83, 204)"></p> 
+            <script src="dayofweek.js"></script></h3>
+             <h3> <p id="date" class="outset"  style="color:rgb(102, 83, 204)"></p> 
+            <script src="datetime.js"></script></h3>
       </div>
       <div class="nav_bar">
         <a href="index.php" target="_blank">Home</a>
