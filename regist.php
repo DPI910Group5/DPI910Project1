@@ -48,10 +48,12 @@
       
                    
       <div class="tlf">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="submit" name="submit" class="signupbtn">Sign Up</button>
+        <button id=" btn" type="button" class="cancelbtn">Cancel</button>
+     
+        <button type="submit" class="signupbtn">Sign Up</button>
       </div>
-    </div>
+     </div>
+     <script src="cancel.js"></script></h3>
   </form>
 </body>
 </html>
