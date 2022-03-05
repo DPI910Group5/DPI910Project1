@@ -27,6 +27,8 @@
 <form name='registration' action="regist.php" method="POST" style="border:1px solid #ccc">
 <?php include ('errors.php');?>    
 <div class="container">
+      <table> <td>
+        <p><img src="reg.jpg" alt="bk1" width="275" height="210" align="left"/></p></td></table>
    <b> <p>Kindly complete this form to create an account.</p> </b> 
       <hr>  
       <label for="fname"><b>First Name</b></label>
