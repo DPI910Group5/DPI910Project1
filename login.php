@@ -24,6 +24,8 @@
       </div>
       <form action="login.php" method="POST" style="border:1px solid #ccc">
         <div class="container">
+             <table> <td>
+          <p><img src="button.jpg" alt="bk1" width="275" height="210" align="left"/></p></td></table>
        <b> <p>Sign in to Access your Account.</p> </b> 
           <hr>
           <?php include('errors.php'); ?>
