@@ -26,6 +26,7 @@ $fname = $_SESSION['fname'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPI910 Project</title>
     <link rel="stylesheet" href="dpi.css">
+      <p><img src="logo.png" alt="bk1" width="275" height="210" align="left"/></p>
 </head>
 <body>
     <div class="head">
