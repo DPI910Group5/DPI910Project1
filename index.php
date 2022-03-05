@@ -30,6 +30,10 @@ $fname = $_SESSION['fname'];
 <body>
     <div class="head">
         <h1>Welcome To DPI910 Web Form</h1>
+        <h3> <p id="weeks" class="outset"  style="color:rgb(102, 83, 204)"></p> 
+            <script src="dayofweek.js"></script></h3>
+             <h3> <p id="date" class="outset"  style="color:rgb(102, 83, 204)"></p> 
+            <script src="datetime.js"></script></h3>
       </div>
       <div class="nav_bar">
         <a href="index.php">Home</a>
