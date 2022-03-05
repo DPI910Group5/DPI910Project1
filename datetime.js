@@ -11,17 +11,24 @@ var Fullhour = NowDate.getHours();
 var hr = NowDate.getHours();
 var min = NowDate.getMinutes();
 var sec = NowDate.getSeconds();
-var amOrpm = 'pm';
-if (min < 10) {
-  min = "0" + min;
+var amOrpm = 'AM';
+// if (min < 10) {
+//   min = "0" + min;
+// }
+// if (hr > 12) {
+//   hr = hr - 12;
+// }    
+// if(hr==0){ 
+//   hr=12;
+// }
+// if(Fullhour < 12) {
+//     amOrpm = 'pm';
+
+if(hr == 0){
+    hr = 12;
 }
-if (hr > 12) {
-  hr = hr - 12;
-}    
-if(hr==0){ 
-  hr=12;
-}
-if(Fullhour < 12) {
-    amOrpm = 'am';
+if(hr > 12){
+    hr = hr - 12;
+    amOrpm = "PM";
 }     
 document.getElementById('date').innerHTML =  + hr+':'+min+':'+sec +' '+amOrpm + '<br>' +Full_Data;
